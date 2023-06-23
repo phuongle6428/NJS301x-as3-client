@@ -10,7 +10,7 @@ function Home(props) {
 	//Fetch Product
 	useEffect(() => {
 		const fetchData = async () => {
-			console.log(ProductAPI.getAPI)
+			console.log(process.env.MY_API)
 			const response = await ProductAPI.getAPI();
 
 			const data = response.splice(0, 8);
