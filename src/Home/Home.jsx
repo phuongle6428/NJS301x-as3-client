@@ -3,6 +3,7 @@ import ProductAPI from '../API/ProductAPI';
 import Image from '../Share/img/Image';
 import convertMoney from '../convertMoney';
 import { Link } from 'react-router-dom';
+import { URL } from '../API/axiosClient';
 
 function Home(props) {
 	const [products, setProducts] = useState([]);
@@ -10,7 +11,7 @@ function Home(props) {
 	//Fetch Product
 	useEffect(() => {
 		const fetchData = async () => {
-			console.log(process.env.MY_API)
+			console.log(URL)
 			const response = await ProductAPI.getAPI();
 
 			const data = response.splice(0, 8);
