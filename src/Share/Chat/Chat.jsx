@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 
 import io from 'socket.io-client';
 
-const socket = io('https://njs-301x-as3-nodejs-tutwcqxix-phuongle6428.vercel.app/');
+const socket = io(process.env.MY_API);
 
 function Chat(props) {
 	const [activeChat, setActiveChat] = useState(false);

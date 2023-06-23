@@ -12,7 +12,6 @@ function Home(props) {
 		const fetchData = async () => {
 			console.log('I call')
 			const response = await ProductAPI.getAPI();
-			console.log(response);
 
 			const data = response.splice(0, 8);
 
